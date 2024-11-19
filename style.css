@@ -1,0 +1,337 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.animated-button {
+    background-color: lightgray;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+  }
+
+  .animated-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.721);
+    transition: transform 0.5s ease;
+  }
+
+  .animated-button:hover::before {
+    transform: translateX(100%);
+  }
+
+  .animated-button:hover {
+      color:white;
+    background-color:black;
+  }
+  .nav-item{
+    margin: 0px 12px;
+    font-size: 1.2rem;
+  }
+  .fas{
+    font-size: 1.2rem;
+  }
+nav{
+    font-size: 1.3rem;
+}
+.navbar-brand{
+    font-size: 2.3rem;
+}
+.services{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#c7ffd848;
+    padding: 20px;
+}
+.service{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.service > #icon {
+    background-color: #6c9f639d;
+    padding:8px;
+    border-radius: 50px;
+    font-size: 25px; 
+}
+.service > img{
+    background-color: #6c9f639d;
+    border-radius: 50px;
+    padding:8px;
+}
+.service > span{
+    font-weight: bold;
+}
+.banner1{
+    background-color:#f9f6f1;
+}
+.banner1 > img{
+    width: 100%;
+}
+.collections{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f6f1;
+}
+.collections > h2{
+    text-align: center;
+    font-size: 2rem;
+}
+.collection-part1{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 15px 0px 20px 80px;
+    width: 100%;
+}
+.collection{
+    width:25%;
+    display: flex;
+}
+.collection > img{
+    width: 80%;
+}
+.collections > button{
+    width: 15rem;
+    padding: 10px 20px; 
+}
+.banner2 > img{
+    width: 100%;
+}
+.categories{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f6f1;
+}
+.categories > h2{
+    text-align: center;
+    font-size: 2rem;
+}
+.categories-part1{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 15px 0px 20px 80px;
+    width: 100%;
+}
+.category{
+    width:25%;
+    display: flex;
+}
+.category > img{
+    width: 80%;
+}
+.categories> button{
+    width: 15rem;
+    padding: 10px 20px; 
+}
+.store > img{
+    width: 100%;
+}
+.enquire > img{
+    width: 100%;
+}
+.blogs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+    background-color: #f9f6f1;
+}
+.blogs > h2{
+    text-align: center;
+    font-size: 2rem;
+}
+.blogs-part1{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 15px 0px 20px 80px;
+    width: 100%;
+}
+.blog{
+    width:25%;
+    display: flex;
+}
+.blog > img{
+    width: 80%;
+}
+.blogs> button{
+    width: 15rem;
+    padding: 10px 20px; 
+}
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen  and (max-width:400px) {
+    *{
+        /* margin: 0;*/
+    padding: 0; 
+    box-sizing: border-box;
+    max-width: 100%;
+    /* margin: 0px auto; */
+    overflow-x: hidden;
+    }
+    #carouselExampleFade{
+        margin-top: 50px;
+    }
+    .banner1 >img , .banner2 > img{
+        height: 7rem;
+    }
+    .services{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .service > #icon{
+        font-size: 0.8rem;
+    }
+    .service > span{
+        font-size: 0.5rem;
+    }
+    .service > .img{
+        width: 35px;
+    }
+    .carousel-item{
+        height: 3.5 rem;
+    }
+    .collections > h2, .blogs>h2, .categories >h2, .deals h2 , .new-launches h2{
+        overflow: hidden;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .collection-part1, .blogs-part1{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding-right:20rem;
+    }
+    .collection, .blog{
+        width: 7rem;
+    }
+    .blog-img1{
+        width: 10rem;
+    }
+    .collection >img{
+        width: 150%;
+    }
+    .collections > button, .blogs>button, .categories> button{
+        background-color: lightgray;
+        width: 8rem;
+        font-size: 0.5rem;
+        padding: 10px 20px; 
+    }
+    .collections > button:hover{
+       cursor: pointer;
+    }
+    .categories-part1{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding-right: 20rem;
+    }
+     .category{
+        width: 8rem;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width:768px) {
+    *{
+        margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0px auto;
+    overflow-x: hidden;
+    }
+    .navbar-brand {
+        margin-left: 0; /* Align the brand to the far left */
+      }
+    
+      .navbar-toggler {
+        margin-left: auto; /* Push the toggle button to the far right */
+      }
+    
+      .navbar .container-fluid {
+        display: flex;
+        justify-content: space-between; /* Ensure proper spacing between brand and toggle */
+      }
+      #carouselExampleFade{
+        margin-top: 50px;
+    }
+    .banner1 >img , .banner2 > img{
+        height: 17rem;
+    }
+    .services{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .service > #icon{
+        font-size: 0.8rem;
+    }
+    .service > span{
+        font-size: 0.8rem;
+    }
+    .service > .img{
+        width: 35px;
+    }
+    .deals .carousel-item{
+        height: 45%;
+    }
+    .collections > h2, .blogs>h2, .categories >h2, .deals h2 , .new-launches h2{
+        overflow: hidden;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .collection-part1, .blogs-part1{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding-right: 20vw;
+    }
+    .collection, .blog {
+        width: 25vw;
+        height: 30vh;
+    }
+    .blog-img1{
+        width: 10rem;
+    }
+    .collection >img{
+        width: 150%;
+    }
+    .collections > button, .blogs>button, .categories> button{
+        background-color: lightgray;
+        width: 12rem;
+        font-size: 0.8rem;
+        padding: 10px 20px; 
+    }
+    .collections > button:hover{
+       cursor: pointer;
+    }
+    .categories-part1{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding-right: 5rem;
+    }
+     .category{
+        width: 100%;
+    }
+}
